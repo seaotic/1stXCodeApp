@@ -10,6 +10,7 @@ struct ContentView: View {
                     ForEach(names, id: \.self){ name in
                         Button{
                             play(sound: "thunder.m4a")
+                            print("worked")
                         } label: {
                             Image(name)
                                 .resizable()
