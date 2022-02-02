@@ -9,8 +9,7 @@ struct ContentView: View {
                 ScrollView{
                     ForEach(names, id: \.self){ name in
                         Button{
-                            play(sound: "thunder.m4a")
-                            print("worked")
+                            play(sound: "\(name).m4a")
                         } label: {
                             Image(name)
                                 .resizable()
