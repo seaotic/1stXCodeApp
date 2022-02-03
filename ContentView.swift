@@ -6,7 +6,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             NavigationView {
-                ScrollView{
+                ScrollView(.horizontal){
+                    HStack{
                     ForEach(names, id: \.self){ name in
                         Button{
                             play(sound: "\(name).m4a")
@@ -17,6 +18,7 @@ struct ContentView: View {
                                 .cornerRadius(25)
                                 .padding(.horizontal)
                         }
+                    }
                     }
                 }
                 .navigationTitle("Noah's App")
